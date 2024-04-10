@@ -17,7 +17,8 @@ class AccountBankStatementLine(models.Model):
         ).get_move_lines_for_reconciliation(
             excluded_ids=excluded_ids, str=str, offset=offset, limit=limit,
             additional_domain=additional_domain,
-            overlook_partner=overlook_partner
+            overlook_partner=overlook_partner,
+            partner_id=partner_id
         )
 
         reconciliation_aml_accounts = [
